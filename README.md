@@ -1,50 +1,101 @@
-# React + TypeScript + Vite
+# Avatar Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React-based avatar generator application built with TypeScript and Vite. It allows users to create unique avatars using various customization options and download them for later use.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Generate random avatars
+- Customize avatars with different sprite options
+- Download avatars as SVG files
+- Responsive design with Tailwind CSS
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Prerequisites
 
-- Configure the top-level `parserOptions` property like this:
+- Node.js (version 14 or higher)
+- npm or yarn
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Installation
+
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/your-username/avatar-generator.git
+   cd avatar-generator
+   ```
+
+2. Install dependencies:
+
+   ```sh
+   npm install
+   # or
+   yarn install
+   ```
+
+### Running the Development Server
+
+To start the development server, run:
+
+```sh
+npm run dev
+# or
+yarn dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+This will start the Vite development server and you can view the application in your browser at `http://localhost:3000`.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Building for Production
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+To build the project for production, run:
+
+```sh
+npm run build
+# or
+yarn build
 ```
+
+The production-ready files will be generated in the `dist` directory.
+
+### Linting
+
+To lint the project, run:
+
+```sh
+npm run lint
+# or
+yarn lint
+```
+
+### Previewing the Production Build
+
+To preview the production build, run:
+
+```sh
+npm run preview
+# or
+yarn preview
+```
+
+## Project Structure
+
+- `src/`: Contains the source code of the application
+  - `components/`: Reusable React components
+  - `pages/`: Application pages
+  - `index.css`: Global styles
+  - `main.tsx`: Entry point of the application
+- `public/`: Static assets
+- `vite.config.ts`: Vite configuration file
+- `tsconfig.json`: TypeScript configuration file
+- `package.json`: Project metadata and dependencies
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Acknowledgements
+
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [DiceBear Avatars](https://avatars.dicebear.com/)
