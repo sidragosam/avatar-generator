@@ -99,3 +99,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - [Vite](https://vitejs.dev/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [DiceBear Avatars](https://avatars.dicebear.com/)
+
+## Preview
+
+[igneczitibor.hu/avatar-generator](https://igneczitibor.hu/avatar-generator)
