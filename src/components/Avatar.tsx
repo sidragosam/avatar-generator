@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import Axios from "axios";
+import SpriteSelector from "./SpriteSelector";
+import AvatarButtons from "./AvatarButtons";
 
-const Avatar: React.FC = () => {
+const Avatar = () => {
   const [sprite, setSprite] = useState<string>("bottts");
   const [seed, setSeed] = useState<number>(Math.random() * 1000);
 
@@ -45,37 +47,7 @@ const Avatar: React.FC = () => {
       </div>
       <div className="home">
         <div className="flex justify-center mb-4">
-          <select
-            className="bg-blue-500 text-white font-bold py-2 px-4 rounded"
-            onChange={handleSprite}
-            value={sprite}
-          >
-            <option value="adventurer">Adventurer Human</option>
-            <option value="adventurer-neutral">Adventurer Human Face</option>
-            <option value="avataaars">Human</option>
-            <option value="avataaars-neutral">Human Face</option>
-            <option value="big-ears">Big Ears Human</option>
-            <option value="big-ears-neutral">Big Ears Human Face</option>
-            <option value="big-smile">Big Smile Human</option>
-            <option value="croodles">Old Cartoon Human</option>
-            <option value="croodles-neutral">Old Cartoon Human Face</option>
-            <option value="dylan">00s Cartoon Human</option>
-            <option value="lorelei">Artistic Human</option>
-            <option value="lorelei-neutral">Artistic Human Face</option>
-            <option value="micah">Modern Human</option>
-            <option value="personas">Personas</option>
-            <option value="pixel-art">Pixel Art Human</option>
-            <option value="pixel-art-neutral">Pixel Art Human Face</option>
-            <option value="bottts">Bots</option>
-            <option value="bottts-neutral">Bots Face</option>
-            <option value="fun-emoji">Fun Emoji</option>
-            <option value="glass">Glass</option>
-            <option value="icons">Icons</option>
-            <option value="identicon">Identicon</option>
-            <option value="rings">Rings</option>
-            <option value="shapes">Shapes</option>
-            <option value="thumbs">Thumbs</option>
-          </select>
+          <SpriteSelector sprite={sprite} handleSprite={handleSprite} />
         </div>
         <div className="avatar flex justify-center mb-4">
           <img
@@ -85,20 +57,10 @@ const Avatar: React.FC = () => {
           />
         </div>
         <div className="generate flex justify-center space-x-2">
-          <button
-            className="btn border-1 border-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg"
-            id="gen"
-            onClick={handleGenerate}
-          >
-            Randomize
-          </button>
-          <button
-            className="btn border-1 border-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg"
-            id="down"
-            onClick={downloadImage}
-          >
-            Download
-          </button>
+          <AvatarButtons
+            handleGenerate={handleGenerate}
+            downloadImage={downloadImage}
+          />
         </div>
       </div>
     </div>
